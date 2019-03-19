@@ -29,6 +29,20 @@ public class RecentlyUsedListTest {
 	}
 
 	@Test
+	public void retrieveMoreItems(){
+		RecentlyUsedList recentlyUsedList = new RecentlyUsedList();
+		recentlyUsedList.addThing("126");
+		recentlyUsedList.addThing("127");
+		recentlyUsedList.addThing("128");
+		recentlyUsedList.addThing("129");
+
+
+
+		assertThat(recentlyUsedList.retrieveItem(0,2), is(asList("129","128")));
+	}
+
+
+	@Test
 	public void mostRecentFirst(){
 		RecentlyUsedList recentlyUsedList = new RecentlyUsedList();
 		recentlyUsedList.addThing("126");

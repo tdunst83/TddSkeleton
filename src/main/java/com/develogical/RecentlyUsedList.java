@@ -25,9 +25,18 @@ public class RecentlyUsedList {
         return myList.get(i).toString();
     }
 
+
     public List<String> asList() {
         return myList;
     }
 
 
+    public List<String>  retrieveItem(int i, int j) {
+
+
+        return myList.subList(i,i+j);
+
+
+
+    }
 }
